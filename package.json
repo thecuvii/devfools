@@ -1,0 +1,9 @@
+{
+  "name": "devtuls",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx rimraf dist && npx tsup ./src/index.ts --dts"
+  }
+}
