@@ -1,8 +1,8 @@
 
-![](image.png)
+![](./image.png)
 
 
-## install
+## Install
 
 ``` shell
 
@@ -14,7 +14,7 @@ bun install devtuls
 ```
 
 
-## usage
+## Usage
 
 ```ts
 
@@ -28,4 +28,4 @@ devtuls('redux')
 
 ```
 
-Don't use it, it's just a joke.
+Don't use it, it's just a joke. 🤡
