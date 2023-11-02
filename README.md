@@ -1,10 +1,8 @@
-
 ![](./image.png)
-
 
 ## Install
 
-``` shell
+```shell
 
 npm install devtuls
 yarn install devtuls
@@ -13,20 +11,23 @@ bun install devtuls
 
 ```
 
-
 ## Usage
 
 ```ts
+import devtuls from "devtuls";
 
-import devtuls from 'devtuls'
+devtuls("vue");
+devtuls("nuxt");
+devtuls("angular");
+devtuls("svete");
+devtuls("redux");
+devtuls("react");
+```
 
-devtuls('vue')
-devtuls('nuxt')
-devtuls('angular')
-devtuls('svete')
-devtuls('redux')
-devtuls('react') // TODO not implement yet
+Or
 
+```ts
+devtuls("all"); // to enable all fake
 ```
 
 Don't use it, it's just a joke. 🤡
