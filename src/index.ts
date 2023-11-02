@@ -67,12 +67,12 @@ const allDevtools = {
 
 export type Devtools = keyof typeof allDevtools | "all";
 
-export const devtuls = (devtools: Devtools) => {
+export const devfools = (devtools: Devtools) => {
   if (devtools === "all")
     return Object.keys(allDevtools).forEach((devtools) =>
-      allDevtools[devtools](),
+      allDevtools[devtools]()
     );
   allDevtools[devtools]?.();
 };
 
-export default devtuls;
+export default devfools;

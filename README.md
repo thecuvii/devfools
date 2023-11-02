@@ -4,30 +4,30 @@
 
 ```shell
 
-npm install devtuls
-yarn install devtuls
-pnpm install devtuls
-bun install devtuls
+npm install devfools
+yarn install devfools
+pnpm install devfools
+bun install devfools
 
 ```
 
 ## Usage
 
 ```ts
-import devtuls from "devtuls";
+import devfools from "devfools";
 
-devtuls("vue");
-devtuls("nuxt");
-devtuls("angular");
-devtuls("svete");
-devtuls("redux");
-devtuls("react");
+devfools("vue");
+devfools("nuxt");
+devfools("angular");
+devfools("svete");
+devfools("redux");
+devfools("react");
 ```
 
 Or
 
 ```ts
-devtuls("all"); // to enable all fake
+devfools("all"); // to enable all fake
 ```
 
 Don't use it, it's just a joke. 🤡
