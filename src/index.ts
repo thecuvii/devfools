@@ -70,7 +70,7 @@ export type Devtools = keyof typeof allDevtools | "all";
 export const devfools = (devtools: Devtools) => {
   if (devtools === "all")
     return Object.keys(allDevtools).forEach((devtools) =>
-      allDevtools[devtools]()
+      allDevtools[devtools as Exclude<Devtools, "all">]()
     );
   allDevtools[devtools]?.();
 };
