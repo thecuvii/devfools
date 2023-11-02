@@ -25,6 +25,7 @@ devtuls('nuxt')
 devtuls('angular')
 devtuls('svete')
 devtuls('redux')
+devtuls('react') // TODO not implement yet
 
 ```
 

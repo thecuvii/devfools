@@ -6,12 +6,12 @@ const allDevtools = {
     isClient && (window.$nuxt = "🤡");
   },
   vue: () => {
-    // @ts-ignore I'm nuxt
+    // @ts-ignore I'm vue
     isClient && (window.__VUE__ = "🤡");
   },
   svelte: () => {
     isClient &&
-      // @ts-ignore I'm nuxt
+      // @ts-ignore I'm svelte
       (window.__svelte = {
         v: new Set("🤡"),
       });
@@ -21,7 +21,7 @@ const allDevtools = {
   },
   redux: () => {
     isClient &&
-      // @ts-ignore I'm nuxt
+      // @ts-ignore I'm redux
       (window.__REDUX_DEVTOOLS_EXTENSION__ = {
         connect: () => "🤡",
       });
