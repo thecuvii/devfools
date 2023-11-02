@@ -2,8 +2,23 @@ const isClient = typeof window !== "undefined";
 
 const allDevtools = {
   nuxt: () => {
+    const $nuxt = {
+      config: {},
+      data: {},
+      path: "/",
+      state: {},
+      serverRendered: true,
+      $root: {
+        constructor: {
+          config: {
+            devtools: false,
+          },
+        },
+      },
+    };
+
     // @ts-ignore I'm nuxt
-    isClient && (window.$nuxt = "🤡");
+    isClient && (window.$nuxt = $nuxt);
   },
   vue: () => {
     // @ts-ignore I'm nuxt
@@ -32,8 +47,14 @@ const allDevtools = {
   },
 };
 
-type Devtools = keyof typeof allDevtools;
+export type Devtools = keyof typeof allDevtools | "all";
 
-export default function devtuls(devtools: Devtools) {
+export const devtuls = (devtools: Devtools) => {
+  if (devtools === "all")
+    return Object.keys(allDevtools).forEach((devtools) =>
+      allDevtools[devtools](),
+    );
   allDevtools[devtools]?.();
-}
+};
+
+export default devtuls;
