@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npx rimraf dist && npx tsup ./src/index.ts --dts"
+    "build": "npx rimraf dist && npx tsup ./src/index.ts --dts",
+    "release": "npx bumpp && pnpm publish"
   }
 }
