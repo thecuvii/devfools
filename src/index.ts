@@ -1,6 +1,28 @@
 const isClient = typeof window !== "undefined";
 
+declare const window: any;
+
 const allDevtools = {
+  react: () => {
+    if (!isClient) return;
+    Object.defineProperty(window, "__REACT_DEVTOOLS_ATTACH__", {
+      enumerable: false,
+      // This property needs to be configurable to allow third-party integrations
+      // to attach their own renderer. Note that using third-party integrations
+      // is not officially supported. Use at your own risk.
+      configurable: true,
+      get() {
+        return {};
+      },
+    });
+
+    if (window.__REACT_DEVTOOLS_GLOBAL_HOOK__) {
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__.renderers.set("🤡", () => {});
+      try {
+        window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject();
+      } catch {}
+    }
+  },
   nuxt: () => {
     const $nuxt = {
       config: {},
@@ -17,16 +39,13 @@ const allDevtools = {
       },
     };
 
-    // @ts-ignore I'm nuxt
     isClient && (window.$nuxt = $nuxt);
   },
   vue: () => {
-    // @ts-ignore I'm vue
     isClient && (window.__VUE__ = "🤡");
   },
   svelte: () => {
     isClient &&
-      // @ts-ignore I'm svelte
       (window.__svelte = {
         v: new Set("🤡"),
       });
@@ -36,13 +55,11 @@ const allDevtools = {
   },
   redux: () => {
     isClient &&
-      // @ts-ignore I'm redux
       (window.__REDUX_DEVTOOLS_EXTENSION__ = {
         connect: () => "🤡",
       });
   },
   motion: () => {
-    // @ts-ignore I'm motion
     window.__MOTION_DEV_TOOLS = "🤡";
   },
 };
