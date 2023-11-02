@@ -17,9 +17,10 @@ const allDevtools = {
     });
 
     if (window.__REACT_DEVTOOLS_GLOBAL_HOOK__) {
-      window.__REACT_DEVTOOLS_GLOBAL_HOOK__.renderers.set("🤡", () => {});
       try {
-        window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject();
+        window.__REACT_DEVTOOLS_GLOBAL_HOOK__.inject({
+          reconcilerVersion: "100.666",
+        });
       } catch {}
     }
   },
