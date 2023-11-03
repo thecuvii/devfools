@@ -152,6 +152,42 @@ const allDevtools = {
   material: () => {
     defineWindowProperty('ngMaterial', {})
   },
+  pwa: () => {
+    const $link = document.createElement('link')
+    $link.setAttribute('rel', 'manifest')
+    document.head.appendChild($link)
+  },
+  sentry: () => {
+    defineWindowProperty('__SENTRY__', true)
+    defineWindowProperty('Raven', {
+      config: {},
+    })
+    defineWindowProperty('Sentry', {
+      SDK_VERSION: VersionMap.sentry,
+    })
+  },
+  styledComponent: () => {
+    const $div = document.createElement('div')
+    $div.setAttribute('sc-component-id', '🤡')
+    document.body.appendChild($div)
+
+    const $style = document.createElement('style')
+    $style.setAttribute('data-styled-version', '🤡')
+    document.head.appendChild($style)
+  },
+  webpack: () => {
+    defineWindowProperty('webpackChunk', {})
+  },
+  googleAnalytics: () => {
+    defineWindowProperty('gaGlobal', {})
+    defineWindowProperty('GoogleAnalyticsObject', {})
+  },
+  umami: () => {
+    defineWindowProperty('umami', {})
+  },
+  babel: () => {
+    defineWindowProperty('_babelPolyfill', {})
+  },
 }
 
 export type Devtools = keyof typeof allDevtools | 'all'
