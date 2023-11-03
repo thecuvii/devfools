@@ -5,4 +5,6 @@ export const VersionMap = {
   antd: '4.15.2',
   CodeMirror: '6',
   vuepress: '2.0.0',
+  sentry: '6.12.0',
+  prism: '1.24.1',
 }

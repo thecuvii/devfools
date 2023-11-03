@@ -188,6 +188,18 @@ const allDevtools = {
   babel: () => {
     defineWindowProperty('_babelPolyfill', {})
   },
+  hljs: () => {
+    defineWindowProperty('hljs', {
+      highlightBlock: {},
+      listLanguages: ['javascript'],
+    })
+  },
+  prism: () => {
+    defineWindowProperty('Prism', {})
+    defineWindowProperty('apex', {
+      libVersions: { prismJs: { version: VersionMap.prism } },
+    })
+  },
 }
 
 export type Devtools = keyof typeof allDevtools | 'all'
