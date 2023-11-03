@@ -14,20 +14,16 @@ bun install devfools
 ## Usage
 
 ```ts
-import devfools from "devfools";
+import devfools from 'devfools'
 
-devfools("vue");
-devfools("nuxt");
-devfools("angular");
-devfools("svelte");
-devfools("redux");
-devfools("react");
+// or "antd" | "manoco" | "next" | "vite" | "vitepress" | "element" | "solid" | "react" | "nuxt" | "vue" | "svelte" | "angular" | "redux" | "motion" | "mobx" | "tailwind" | "naive" | "codemirror" | "all"
+devfools('vue')
 ```
 
 Or
 
 ```ts
-devfools("all"); // to enable all fake
+devfools('all') // to enable all fake
 ```
 
 Don't use it, it's just a joke. 🤡
