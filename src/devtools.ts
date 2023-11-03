@@ -1,4 +1,4 @@
-import { VersionMap } from './version'
+import VersionMap from './version.json'
 
 declare const window: any
 
@@ -14,14 +14,14 @@ const defineWindowProperty = (name: string, value: any) => {
 }
 
 type Config = {
-  packageName?: string
+  packageName?: string | true
   enable: () => void
   // disbale:()=>void TODO
 }
 
 export const allDevtools = {
   next: {
-    packageName: 'next',
+    packageName: true,
     enable: () => {
       allDevtools.react.enable()
       defineWindowProperty('next', {
@@ -30,7 +30,6 @@ export const allDevtools = {
     },
   },
   vite: {
-    packageName: 'vite',
     enable: () => {
       defineWindowProperty('__vite_is_modern_browser', true)
     },
@@ -125,6 +124,7 @@ export const allDevtools = {
     },
   },
   gsap: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('gsap', {
         version: VersionMap.gsap,
@@ -132,9 +132,10 @@ export const allDevtools = {
     },
   },
   three: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('THREE', {
-        REVISION: VersionMap.THREE,
+        REVISION: VersionMap.three,
       })
     },
   },
@@ -151,6 +152,7 @@ export const allDevtools = {
     },
   },
   rive: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('rive', {
         Rive: '',
@@ -158,6 +160,7 @@ export const allDevtools = {
     },
   },
   antd: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('antd', {
         version: VersionMap.antd,
@@ -179,13 +182,15 @@ export const allDevtools = {
     },
   },
   codemirror: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('CodeMirror', {
-        version: VersionMap.CodeMirror,
+        version: VersionMap.codemirror,
       })
     },
   },
   vuepress: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('__VUEPRESS__', {
         version: VersionMap.vuepress,
@@ -217,6 +222,7 @@ export const allDevtools = {
     },
   },
   sentry: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('__SENTRY__', true)
       defineWindowProperty('Raven', {
@@ -268,6 +274,7 @@ export const allDevtools = {
     },
   },
   prism: {
+    packageName: true,
     enable: () => {
       defineWindowProperty('Prism', {})
       defineWindowProperty('apex', {
