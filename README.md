@@ -21,7 +21,7 @@ bun install devfools
 import devfools from 'devfools'
 
 // or "antd" | "manoco" | "next" | "vite" | "vitepress" | "element" | "solid" | "react" | "nuxt" | "vue" | "svelte" | "angular" | "redux" | "motion" | "mobx" | "tailwind" | "naive" | "codemirror" | .... | "all"
-devfools('vue')
+devfools('vue', 'react', 'next')
 ```
 
 Or

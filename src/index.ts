@@ -144,17 +144,30 @@ const allDevtools = {
   remix: () => {
     defineWindowProperty('__remixContext', {})
   },
+  nextui: () => {
+    const $style = document.createElement('style')
+    $style.innerHTML = `#fake-devfools {--nextui-colors-text: #000}`
+    document.head.appendChild($style)
+  },
+  material: () => {
+    defineWindowProperty('ngMaterial', {})
+  },
 }
 
 export type Devtools = keyof typeof allDevtools | 'all'
-
-export const devfools = (devtools: Devtools) => {
+export function devfools(devtools: 'all'): void
+export function devfools(...devtools: Devtools[]): void
+export function devfools(...devtools: Devtools[]) {
   if (!isClient) return
-  if (devtools === 'all')
+  if (devtools.length === 1 && devtools[0] === 'all')
     return Object.keys(allDevtools).forEach((devtools) =>
       allDevtools[devtools as Exclude<Devtools, 'all'>](),
     )
-  allDevtools[devtools]?.()
+
+  devtools.forEach((devtool) => {
+    if (devtool === 'all') return
+    allDevtools[devtool]()
+  })
 }
 
 export default devfools
