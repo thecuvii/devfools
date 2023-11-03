@@ -19,7 +19,7 @@ import devfools from "devfools";
 devfools("vue");
 devfools("nuxt");
 devfools("angular");
-devfools("svete");
+devfools("svelte");
 devfools("redux");
 devfools("react");
 ```
