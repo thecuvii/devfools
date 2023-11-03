@@ -7,5 +7,8 @@
     "build": "npx rimraf dist && npx tsup ./src/index.ts --dts",
     "prepublish": "pnpm run build",
     "release": "npx bumpp && pnpm publish"
+  },
+  "devDependencies": {
+    "latest-version": "^7.0.0"
   }
 }
