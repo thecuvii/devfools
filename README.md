@@ -1,4 +1,8 @@
-![](./image.png)
+# Devfools
+
+A tool that fools all kinds of devtools detection.
+
+![](https://github.com/withyellow/devfools/assets/41265413/296df711-9070-4483-9f46-f0ca3fa910f9)
 
 ## Install
 
