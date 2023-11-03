@@ -20,7 +20,7 @@ bun install devfools
 ```ts
 import devfools from 'devfools'
 
-// or "antd" | "manoco" | "next" | "vite" | "vitepress" | "element" | "solid" | "react" | "nuxt" | "vue" | "svelte" | "angular" | "redux" | "motion" | "mobx" | "tailwind" | "naive" | "codemirror" | "all"
+// or "antd" | "manoco" | "next" | "vite" | "vitepress" | "element" | "solid" | "react" | "nuxt" | "vue" | "svelte" | "angular" | "redux" | "motion" | "mobx" | "tailwind" | "naive" | "codemirror" | .... | "all"
 devfools('vue')
 ```
 

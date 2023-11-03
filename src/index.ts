@@ -1,3 +1,5 @@
+import { VersionMap } from './version'
+
 const isClient = typeof window !== 'undefined'
 
 declare const window: any
@@ -17,7 +19,7 @@ const allDevtools = {
   next: () => {
     allDevtools.react()
     defineWindowProperty('next', {
-      version: '14.0.0',
+      version: VersionMap.next,
     })
   },
   vite: () => {
@@ -84,6 +86,23 @@ const allDevtools = {
   motion: () => {
     defineWindowProperty('__MOTION_DEV_TOOLS__', '🤡')
   },
+  framer: () => {
+    defineWindowProperty('Framer', {
+      version: '100',
+      Animatable: true,
+    })
+    defineWindowProperty('__framer_importFromPackage', true)
+  },
+  gsap: () => {
+    defineWindowProperty('gsap', {
+      version: VersionMap.gsap,
+    })
+  },
+  three: () => {
+    defineWindowProperty('THREE', {
+      REVISION: VersionMap.THREE,
+    })
+  },
   mobx: () => {
     defineWindowProperty('__mobxGlobal', '1')
     defineWindowProperty('__mobxInstanceCount', '1')
@@ -92,9 +111,14 @@ const allDevtools = {
   tailwind: () => {
     defineWindowProperty('tailwind', '🤡')
   },
+  rive: () => {
+    defineWindowProperty('rive', {
+      Rive: '',
+    })
+  },
   antd: () => {
     defineWindowProperty('antd', {
-      version: '100.0.0',
+      version: VersionMap.antd,
     })
   },
   naive: () => {
@@ -109,8 +133,16 @@ const allDevtools = {
   },
   codemirror: () => {
     defineWindowProperty('CodeMirror', {
-      version: '116.0.0',
+      version: VersionMap.CodeMirror,
     })
+  },
+  vuepress: () => {
+    defineWindowProperty('__VUEPRESS__', {
+      version: VersionMap.vuepress,
+    })
+  },
+  remix: () => {
+    defineWindowProperty('__remixContext', {})
   },
 }
 
