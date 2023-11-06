@@ -1,11 +1,12 @@
 {
-  "sentry": "0.1.2",
-  "codemirror": "6.0.1",
-  "vuepress": "1.9.10",
   "prism": "4.1.2",
-  "antd": "5.10.3",
+  "sentry": "0.1.2",
   "gsap": "3.12.2",
   "rive": "1.1.4",
+  "codemirror": "6.0.1",
+  "antd": "5.11.0",
   "three": "0.158.0",
+  "vuepress": "1.9.10",
+  "htmx.org": "1.9.7",
   "next": "14.0.1"
 }

@@ -282,4 +282,17 @@ export const allDevtools = {
       })
     },
   },
+  ['htmx.org']: {
+    packageName: true,
+    enable: () => {
+      defineWindowProperty('htmx', {
+        version: VersionMap['htmx.org'],
+      })
+    },
+  },
+  hyperscript: {
+    enable: () => {
+      defineWindowProperty('_hyperscript', {})
+    }
+  }
 } satisfies { [key: string]: Config }
