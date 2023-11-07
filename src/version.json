@@ -8,5 +8,6 @@
   "three": "0.158.0",
   "vuepress": "1.9.10",
   "htmx.org": "1.9.7",
-  "next": "14.0.1"
+  "next": "14.0.1",
+  "lit-element": "4.0.1"
 }

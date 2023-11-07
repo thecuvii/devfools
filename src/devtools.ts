@@ -293,6 +293,18 @@ export const allDevtools = {
   hyperscript: {
     enable: () => {
       defineWindowProperty('_hyperscript', {})
-    }
-  }
+    },
+  },
+  ['lit-element']: {
+    packageName: true,
+    enable() {
+      defineWindowProperty('litElementVersions', [VersionMap['lit-element']])
+    },
+  },
+  ['lit-html']: {
+    packageName: true,
+    enable() {
+      defineWindowProperty('litHtmlVersions', [VersionMap['lit-html']])
+    },
+  },
 } satisfies { [key: string]: Config }
