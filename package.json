@@ -5,9 +5,8 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "npx rimraf dist && npx tsup ./src/index.ts --dts",
-    "prepublish": "pnpm run build",
-    "release": "npx bumpp && pnpm publish",
-    "version": "npx tsx ./scripts/version"
+    "prepublish": " pnpm run build",
+    "release": "npx bumpp && pnpm publish"
   },
   "devDependencies": {
     "latest-version": "^7.0.0"
