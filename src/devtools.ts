@@ -488,5 +488,12 @@ export const allDevtools = {
     enable() {
         defineWindowProperty('django',{})
     },
+  },
+  ['Stripe']:{
+    enable() {
+      defineWindowProperty('Stripe',{
+        'version':VersionMap['Stripe']
+      })
+    },
   }
 } satisfies { [key: string]: Config }
