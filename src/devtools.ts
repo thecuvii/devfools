@@ -471,5 +471,22 @@ export const allDevtools = {
     enable() {
         defineWindowProperty('wp_username',{})
     },
+  },
+  ['Atlassian Bitbucket']:{
+    enable() {
+        defineWindowProperty('bitbucket',{})
+    },
+  },
+  ['Atlassian Jira']:{
+    enable() {
+        defineWindowProperty('jira',{
+          'id':''
+        })
+    },
+  },
+  ['Django']:{
+    enable() {
+        defineWindowProperty('django',{})
+    },
   }
 } satisfies { [key: string]: Config }
