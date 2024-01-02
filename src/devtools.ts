@@ -542,5 +542,13 @@ export const allDevtools = {
           "dlm-version":VersionMap['Download-Monitor'] || "🤡"
         })
     },
+  },
+  ['Devfools']:{
+    enable() {
+        defineWindowProperty("__Devfools__",{
+          'version':"🤡",
+          all:Object.keys(allDevtools)
+        })
+    },
   }
 } satisfies { [key: string]: Config }
