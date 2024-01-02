@@ -22,5 +22,6 @@
   "Stripe":"3",
   "Lodash":"4.17.15",
   "Docusaurus":"2.4.3",
-  "Ionic":"7.6.2"
+  "Ionic":"7.6.2",
+  "Download-Monitor":""
 }

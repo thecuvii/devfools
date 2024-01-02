@@ -13,6 +13,15 @@ const defineWindowProperty = (name: string, value: any) => {
   })
 }
 
+const createMeta = (metas:Record<string,string>)=>{
+  Object.keys(metas).forEach((name:keyof typeof metas)=>{
+    const _meta = document.createElement("meta")
+    _meta.setAttribute("name",name)
+    _meta.setAttribute("content",metas[name])
+    document.head.appendChild(_meta)
+  })
+}
+
 type Config = {
   packageName?: string | true
   enable: () => void
@@ -508,16 +517,29 @@ export const allDevtools = {
   },
   ['Docusaurus']:{
     enable() {
-        const docusaurus = document.createElement("meta")
-        docusaurus.setAttribute("name","")
-        docusaurus.setAttribute("content",`Docusaurus v${VersionMap['Docusaurus']}`)
-        document.head.appendChild(docusaurus)
+        createMeta({
+          generator:`Docusaurus v${VersionMap['Docusaurus']}`
+        })
     },
   },
   ['Ionic']:{
     enable() {
         defineWindowProperty("Ionic",{
           'version':VersionMap['Ionic']
+        })
+    },
+  },
+  ['Dokeos']:{
+    enable() {
+        createMeta({
+          "generator":"Dokeos"
+        })
+    },
+  },
+  ['Download Monitor']:{
+    enable() {
+        createMeta({
+          "dlm-version":VersionMap['Download-Monitor']
         })
     },
   }
