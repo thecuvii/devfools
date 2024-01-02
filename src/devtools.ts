@@ -539,7 +539,7 @@ export const allDevtools = {
   ['Download Monitor']:{
     enable() {
         createMeta({
-          "dlm-version":VersionMap['Download-Monitor']
+          "dlm-version":VersionMap['Download-Monitor'] || "🤡"
         })
     },
   }
