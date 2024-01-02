@@ -495,5 +495,12 @@ export const allDevtools = {
         'version':VersionMap['Stripe']
       })
     },
+  },
+  ['Lodash']:{
+    enable() {
+        defineWindowProperty('_',{
+          'VERSION':VersionMap['Lodash']
+        })
+    },
   }
 } satisfies { [key: string]: Config }

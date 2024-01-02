@@ -19,5 +19,6 @@
   "Socket.io":"4.7.2",
   "Hammer.js":"2.0.7",
   "Handlebars":"4.7.8",
-  "Stripe":"3"
+  "Stripe":"3",
+  "Lodash":"4.17.15"
 }
