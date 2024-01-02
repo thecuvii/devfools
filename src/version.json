@@ -20,5 +20,7 @@
   "Hammer.js":"2.0.7",
   "Handlebars":"4.7.8",
   "Stripe":"3",
-  "Lodash":"4.17.15"
+  "Lodash":"4.17.15",
+  "Docusaurus":"2.4.3",
+  "Ionic":"7.6.2"
 }

@@ -505,5 +505,20 @@ export const allDevtools = {
           'VERSION':VersionMap['Lodash']
         })
     },
+  },
+  ['Docusaurus']:{
+    enable() {
+        const docusaurus = document.createElement("meta")
+        docusaurus.setAttribute("name","")
+        docusaurus.setAttribute("content",`Docusaurus v${VersionMap['Docusaurus']}`)
+        document.head.appendChild(docusaurus)
+    },
+  },
+  ['Ionic']:{
+    enable() {
+        defineWindowProperty("Ionic",{
+          'version':VersionMap['Ionic']
+        })
+    },
   }
 } satisfies { [key: string]: Config }
