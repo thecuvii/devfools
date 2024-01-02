@@ -498,6 +498,9 @@ export const allDevtools = {
   },
   ['Lodash']:{
     enable() {
+        const lodashScript = document.createElement("script")
+        lodashScript.setAttribute("src",`lodash@${VersionMap['Lodash']}.js`)
+        document.head.appendChild(lodashScript)
         defineWindowProperty('_',{
           'VERSION':VersionMap['Lodash']
         })
