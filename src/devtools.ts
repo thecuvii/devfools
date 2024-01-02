@@ -543,6 +543,13 @@ export const allDevtools = {
         })
     },
   },
+  ['D3']:{
+    enable() {
+        defineWindowProperty("d3",{
+          'version':VersionMap['D3']
+        })
+    },
+  },
   ['Devfools']:{
     enable() {
         defineWindowProperty("__Devfools__",{

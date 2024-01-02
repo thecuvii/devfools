@@ -23,5 +23,6 @@
   "Lodash":"4.17.15",
   "Docusaurus":"2.4.3",
   "Ionic":"7.6.2",
-  "Download-Monitor":""
+  "Download-Monitor":"",
+  "D3":"7.8.5"
 }
