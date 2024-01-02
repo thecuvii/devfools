@@ -53,6 +53,13 @@ export const allDevtools = {
       defineWindowProperty('Solid$$', true)
     },
   },
+  ['SolidStart']:{
+    enable() {
+        defineWindowProperty('_$HY',{
+          'init':true,
+        })
+    },
+  },
   react: {
     enable: () => {
       defineWindowProperty('__REACT_DEVTOOLS_ATTACH__', {})
@@ -247,6 +254,7 @@ export const allDevtools = {
   webpack: {
     enable: () => {
       defineWindowProperty('webpackChunk', {})
+      defineWindowProperty('webpackJsonp', {})
     },
   },
   googleAnalytics: {
@@ -307,4 +315,161 @@ export const allDevtools = {
       defineWindowProperty('litHtmlVersions', [VersionMap['lit-html']])
     },
   },
+  ['Magento']:{
+    enable() {
+        defineWindowProperty('Mage','')
+        defineWindowProperty('VarienForm','')
+    },
+  },
+  ['Magisto']:{
+    enable() {
+        defineWindowProperty('MagistoPlayerFrame','')
+        defineWindowProperty('magisto_server','')
+    },
+  },
+  ['Q4']:{
+    enable() {
+        defineWindowProperty('q4App',{
+          a11yAnnouncement:""
+        })
+        defineWindowProperty('q4Defaults',{
+          fancySignup:""
+        })
+    },
+  },
+  ['Qstomizer']:{
+    enable() {
+        defineWindowProperty("jQueryQSMZ","")
+        defineWindowProperty("loadScript_qsmz","")
+        defineWindowProperty("qstomizer_script","")
+    },
+  },
+  ['Quanta']:{
+    enable() {
+        defineWindowProperty('QUANTA',{
+          app_id:""
+        })
+        defineWindowProperty('QuantaTagRUMSpeedIndex','')
+    },
+  },
+  ['Quantcast Measure']:{
+    enable() {
+        defineWindowProperty('quantserve','')
+    },
+  },
+  ['Qubit']:{
+    enable() {
+        defineWindowProperty('__qubit','')
+        defineWindowProperty('onQubitReady','')
+    },
+  },
+  ['USWDS']:{
+    enable() {
+        defineWindowProperty('uswdsPresent','')
+    },
+  },
+  ['XOOPS']:{
+    enable() {
+        defineWindowProperty('xoops','')
+    },
+  },
+  ['Jquery']:{
+    enable() {
+        defineWindowProperty('jQuery',{
+          "fn":{
+            "jquery":VersionMap['Jquery']
+          }
+        })
+    },
+  },
+  ['Typekit']:{
+    enable() {
+        defineWindowProperty('Typekit',{
+          "config":{
+            "js":VersionMap['Typekit']
+          }
+        })
+    },
+  },
+  ['Remix']:{
+    enable() {
+      defineWindowProperty('__remixContext',{})
+      defineWindowProperty('__remixManifest',{})
+    },
+  },
+  ['Flowplayer']:{
+    enable() {
+      defineWindowProperty('flowplayer',{
+        'version':VersionMap['Flowplayer']
+      })
+    },
+  },
+  ['core-js']:{
+    enable() {
+      defineWindowProperty('__core-js_shared__',{
+        'versions':[{"version":VersionMap['core-js']}]
+      })
+    },
+  },
+  ['crypto-js']:{
+    enable() {
+      defineWindowProperty('CryptoJS',{
+        'Rabbit':""
+      })
+    },
+  },
+  ['jQuery Migrate']:{
+    enable() {
+      defineWindowProperty('jQuery',{
+        'migrateVersion':VersionMap['jQuery-Migrate']
+      })
+    },
+  },
+  ['Swagger UI']:{
+    enable() {
+      defineWindowProperty('SwaggerUIBundle',{})
+      defineWindowProperty('SwaggerUIStandalonePreset',{})
+    },
+  },
+  ['Swagify']:{
+    enable() {
+      defineWindowProperty('Swagify',{})
+    },
+  },
+  ['Shopify']:{
+    enable() {
+      defineWindowProperty('SHOPIFY_API_BASE_URL',{})
+      defineWindowProperty('ShopifyAPI',{})
+      defineWindowProperty("Shopify",{})
+      defineWindowProperty('ShopifyCustomer',{})
+      defineWindowProperty('shopifyAccessUrl',{})
+    },
+  },
+  ['Socket.io']:{
+    enable() {
+        defineWindowProperty('io',{
+          'Socket':{},
+          'version':VersionMap['Socket.io']
+        })
+    },
+  },
+  ['Hammer.js']:{
+    enable() {
+        defineWindowProperty('Hammer',{
+          'VERSION':VersionMap['Hammer.js'],
+        })
+    },
+  },
+  ['Handlebars']:{
+    enable() {
+        defineWindowProperty('Handlebars',{
+          'VERSION':VersionMap['Handlebars'],
+        })
+    },
+  },
+  ['WordPress']:{
+    enable() {
+        defineWindowProperty('wp_username',{})
+    },
+  }
 } satisfies { [key: string]: Config }

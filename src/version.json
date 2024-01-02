@@ -10,5 +10,13 @@
   "next": "14.0.3",
   "prism": "4.1.2",
   "gsap": "3.12.2",
-  "htmx.org": "1.9.9"
+  "htmx.org": "1.9.9",
+  "Jquery":"3.7.1",
+  "Typekit":"1.21.0",
+  "Flowplayer":"1.0.0",
+  "core-js":"3.33.3",
+  "jQuery-Migrate":"3.4.1",
+  "Socket.io":"4.7.2",
+  "Hammer.js":"2.0.7",
+  "Handlebars":"4.7.8"
 }
