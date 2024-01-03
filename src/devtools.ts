@@ -13,6 +13,15 @@ const defineWindowProperty = (name: string, value: any) => {
   })
 }
 
+const createMeta = (metas:Record<string,string>)=>{
+  Object.keys(metas).forEach((name:keyof typeof metas)=>{
+    const _meta = document.createElement("meta")
+    _meta.setAttribute("name",name)
+    _meta.setAttribute("content",metas[name])
+    document.head.appendChild(_meta)
+  })
+}
+
 type Config = {
   packageName?: string | true
   enable: () => void
@@ -487,6 +496,66 @@ export const allDevtools = {
   ['Django']:{
     enable() {
         defineWindowProperty('django',{})
+    },
+  },
+  ['Stripe']:{
+    enable() {
+      defineWindowProperty('Stripe',{
+        'version':VersionMap['Stripe']
+      })
+    },
+  },
+  ['Lodash']:{
+    enable() {
+        const lodashScript = document.createElement("script")
+        lodashScript.setAttribute("src",`lodash@${VersionMap['Lodash']}.js`)
+        document.head.appendChild(lodashScript)
+        defineWindowProperty('_',{
+          'VERSION':VersionMap['Lodash']
+        })
+    },
+  },
+  ['Docusaurus']:{
+    enable() {
+        createMeta({
+          generator:`Docusaurus v${VersionMap['Docusaurus']}`
+        })
+    },
+  },
+  ['Ionic']:{
+    enable() {
+        defineWindowProperty("Ionic",{
+          'version':VersionMap['Ionic']
+        })
+    },
+  },
+  ['Dokeos']:{
+    enable() {
+        createMeta({
+          "generator":"Dokeos"
+        })
+    },
+  },
+  ['Download Monitor']:{
+    enable() {
+        createMeta({
+          "dlm-version":VersionMap['Download-Monitor'] || "🤡"
+        })
+    },
+  },
+  ['D3']:{
+    enable() {
+        defineWindowProperty("d3",{
+          'version':VersionMap['D3']
+        })
+    },
+  },
+  ['Devfools']:{
+    enable() {
+        defineWindowProperty("__Devfools__",{
+          'version':"🤡",
+          all:Object.keys(allDevtools)
+        })
     },
   }
 } satisfies { [key: string]: Config }
