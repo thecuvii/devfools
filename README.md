@@ -9,7 +9,7 @@ A tool that fools all kinds of devtools detection.
 ```shell
 
 npm install devfools
-yarn install devfools
+yarn add devfools
 pnpm install devfools
 bun install devfools
 
