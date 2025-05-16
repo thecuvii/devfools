@@ -550,6 +550,13 @@ export const allDevtools = {
         })
     },
   },
+  ['Astro']: {
+    enable() {
+      createMeta({
+        "generator":"Astro v5.7.13"
+      })
+    }
+  },
   ['Devfools']:{
     enable() {
         defineWindowProperty("__Devfools__",{
