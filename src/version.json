@@ -24,5 +24,6 @@
   "Docusaurus":"2.4.3",
   "Ionic":"7.6.2",
   "Download-Monitor":"",
-  "D3":"7.8.5"
+  "D3":"7.8.5",
+  "Astro": "5.7.13"
 }

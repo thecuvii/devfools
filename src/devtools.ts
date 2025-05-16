@@ -553,7 +553,7 @@ export const allDevtools = {
   ['Astro']: {
     enable() {
       createMeta({
-        "generator":"Astro v5.7.13"
+        "generator":`Astro v${VersionMap.Astro}`
       })
     }
   },
